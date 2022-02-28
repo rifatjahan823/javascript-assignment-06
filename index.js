@@ -30,16 +30,18 @@ const showResult = resultValue=>{
          showValue.slice(0,20).forEach(resultValues=> {
             const div = document.createElement("div");
             div.innerHTML=`
-            <div  class="card h-100 text-center p-3">
-            <img  src="${resultValues.image}" class="card-img-top w-50 mx-auto" alt="...">
-            <div class="card-body">
-              <h5 class="card-title ">${resultValues.phone_name}</h5>
-              <p class="card-text "><span style="font-weight:bold">Brand:</span>${resultValues.brand}</p>
-            </div>
-            <div>
-            <button class="btn btn-primary" onclick="showDetails('${resultValues.slug}')">Details</button>
-            </div>
-          </div>
+                <div class="container">
+                <div  class="card h-100 text-center p-3   ">
+                <img  src="${resultValues.image}" class="card-img-top w-50 mx-auto" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title ">${resultValues.phone_name}</h5>
+                  <p class="card-text "><span style="font-weight:bold">Brand:</span>${resultValues.brand}</p>
+                </div>
+                <div>
+                <button class="btn btn-primary" onclick="showDetails('${resultValues.slug}')">Details</button>
+                </div>
+              </div>
+                </div>
             `
             showResult.appendChild(div)
            
@@ -67,8 +69,8 @@ const fullDetails = fullDetailsValue=>{
     //create element
         const div = document.createElement("div");
         div.innerHTML=`
-        <div class="container">
-        <div class="row g-5 my-5 pb-4 d-flex align-items-center border border-secondary">
+        <div class="container px-5 ">
+        <div class="row g-5 my-5 border border-secondary">
         <div class="col-12 col-lg-4 col-md-4">
         <img src="${detailsResult.image}" class="card-img-top img-fluid  mx-auto" alt="...">
         </div>
@@ -79,11 +81,13 @@ const fullDetails = fullDetailsValue=>{
         <p><span style="font-weight:bold">DisplaySize:</span>${detailsResult.mainFeatures.displaySize}</p>
         <p><span style="font-weight:bold">ChipSet:</span>${detailsResult.mainFeatures.chipSet}</p>
         <p><span style="font-weight:bold">Memory:</span>${detailsResult.mainFeatures.memory}</p>
-        <p ><span style="font-weight:bold">Sensors:</span>${detailsResult.mainFeatures.sensors}</p>
+        <p ><span style="font-weight:bold">Sensors:</span>${detailsResult.mainFeatures.sensors[0]}${detailsResult.mainFeatures.sensors[1]}${detailsResult.mainFeatures.sensors[2]}
+        ${detailsResult.mainFeatures.sensors[3]}${detailsResult.mainFeatures.sensors[4]}${detailsResult.mainFeatures.sensors[5]}</p>
         <p><span style="font-weight:bold">WLAN:</span>${detailsResult.others?.WLAN? detailsResult.others?.WLAN:'no result'}</p>
         <p><span style="font-weight:bold">Bluetooth:</span>${detailsResult.others?.Bluetooth? detailsResult.others?.Bluetooth:'no result'}</p>
         <p><span style="font-weight:bold">NFC:</span>${detailsResult.others?.NFC? detailsResult.others?.NFC:'no result'}</p>
-        <p><span style="font-weight:bold">Radio:</sapn>${detailsResult.others?.Radio? detailsResult.others?.Radio:'no result'}</p>
+        <p><span style="font-weight:bold">Radio:
+        </sapn>${detailsResult.others?.Radio? detailsResult.others?.Radio:'no result'}</p>
         <p><span style="font-weight:bold">USB:</span>${detailsResult.others?.USB? detailsResult.others?.USB:'no result'}</p>
       </div>
     </div>
