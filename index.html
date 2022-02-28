@@ -14,13 +14,13 @@
    
  <header><!--header section start -->
     <div class="container">
-        <h1 class="text-center">phone hunter</h1>
+        <h1 class="text-center text-capitalize">search your <span style="color:blue">dreaming phone</span></h1>
     </div>
 </header>
     <section><!-- main section start -->
     <div class="container">
          <!-- The search form -->
-        <div class="example mx-auto my-4"      style="max-width:300px">
+        <div class="example mx-auto my-4">
             <input id="input" type="text" placeholder="Search.." >
                 
             <button id="search-btn" onclick="searchPhone()" type="submit"><i class="fa fa-search"></i></button>
@@ -29,7 +29,7 @@
         <img id="image" src="img/f941ae9d16fd7d2957eea6e5b1100d1e.gif" alt="">
 
          <!-- error hande -->
-        <p id="errorResult">no result found</p>
+        <div id="errorResult"><img  class="w-50  mx-auto d-block"src="img/error.jpg" alt=""></div>
 
         <!-- image details  -->
         <div id="details"class="container" >
