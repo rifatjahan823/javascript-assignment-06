@@ -12,6 +12,7 @@ const searchPhone = ()=>{
        //image details id for clean search result
        const details = document.getElementById("details")
        details.innerText=""
+       document.getElementById("errorResult").style.display="none"
     }
     else{
       document.getElementById("Searcherror").style.display="none"
@@ -43,7 +44,7 @@ const showResult = resultValue=>{
             const div = document.createElement("div");
             div.innerHTML=`
                 <div class="container">
-                <div  class="card h-100 text-center p-3   ">
+                <div  class="card h-100 text-center p-3 ">
                 <img  src="${resultValues.image}" class="card-img-top w-50 mx-auto" alt="...">
                 <div class="card-body">
                   <h5 class="card-title ">${resultValues.phone_name}</h5>
