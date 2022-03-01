@@ -1,6 +1,11 @@
 #errorResult{
     display: none;
+  
 }
 #image{
     display: none;
+}
+#Searcherror{
+    display: none;
+    
 }

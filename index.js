@@ -1,14 +1,26 @@
 const searchPhone = ()=>{
     const input = document.getElementById("input");
-    document.getElementById("image").style.display='block'
     inputValue = input.value;
     input.value=""
+    spiner ("block")
+    if(inputValue==""){
+       document.getElementById("Searcherror").style.display="block"
+       spiner ("none")
+     // <!-- showResul id search result -->
+    const showResult = document.getElementById("showResult")
+    showResult.innerHTML=""
+       //image details id for clean search result
+       const details = document.getElementById("details")
+       details.innerText=""
+    }
+    else{
+      document.getElementById("Searcherror").style.display="none"
 
-    fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
+      fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
     .then(res=>res.json())
     .then(data=>showResult(data))
+    }
 }
-searchPhone ()
 
 //show the search result
 const showResult = resultValue=>{
@@ -44,7 +56,7 @@ const showResult = resultValue=>{
                 </div>
             `
             showResult.appendChild(div)
-           
+            
          });
   }
   spiner ("none")

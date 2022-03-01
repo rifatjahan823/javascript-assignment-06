@@ -13,22 +13,25 @@
 <body>
    
  <header><!--header section start -->
-    <div class="container">
+    <div class="container mt-5">
         <h1 class="text-center text-capitalize">search your <span style="color:blue">dreaming phone</span></h1>
     </div>
 </header>
     <section class="py-5"><!-- main section start -->
          <!-- The search form -->
-        <div class="container  my-4 me-5 ps-5">
+        <div class="container mb-5"style="margin:auto;max-width:300px" >
             <input id="input" type="text" placeholder="Search.." >
     
             <button id="search-btn" onclick="searchPhone()" type="submit"><i class="fa fa-search"></i></button>
         </div>
+        
         <!-- //spiner image -->
         <img id="image" src="img/f941ae9d16fd7d2957eea6e5b1100d1e.gif" alt="">
 
          <!-- error hande -->
-        <div id="errorResult"><img  class="w-50  mx-auto d-block"src="img/error.jpg" alt=""></div>
+        <div id="errorResult"><img  class="w-25  mx-auto d-block"src="img/error.jpg" alt=""></div>
+
+        <p id="Searcherror"class="container text-center text-danger">Search by Name</p>
 
         <!-- image details  -->
         <div id="details"class="container " >
