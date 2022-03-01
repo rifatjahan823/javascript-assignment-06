@@ -83,8 +83,8 @@ const fullDetails = fullDetailsValue=>{
         const div = document.createElement("div");
         div.innerHTML=`
         <div class="container px-5 ">
-        <div class="row g-5 my-5 border border-secondary">
-        <div class="col-12 col-lg-4 col-md-4">
+        <div class="  row  g-5 my-5 border border-secondary align-items-center ">
+        <div class="col-12 col-lg-4 col-md-4 ">
         <img src="${detailsResult.image}" class="card-img-top img-fluid  mx-auto" alt="...">
         </div>
          <div class="col-12 col-lg-8 col-md-8">
