@@ -102,6 +102,7 @@ const fullDetails = fullDetailsValue=>{
         ${detailsResult.mainFeatures.sensors[3]}, ${detailsResult.mainFeatures.sensors[4]}, ${detailsResult.mainFeatures.sensors[5]}</p>
         <p><span style="font-weight:bold">WLAN:</span>${detailsResult.others?.WLAN? detailsResult.others?.WLAN:'no result'}</p>
         <p><span style="font-weight:bold">Bluetooth:</span>${detailsResult.others?.Bluetooth? detailsResult.others?.Bluetooth:'no result'}</p>
+        <p><span style="font-weight:bold">GPS:</span>${detailsResult.others?.GPS? detailsResult.others?.GPS:'no result'}</p>
         <p><span style="font-weight:bold">NFC:</span>${detailsResult.others?.NFC? detailsResult.others?.NFC:'no result'}</p>
         <p><span style="font-weight:bold">Radio:
         </sapn>${detailsResult.others?.Radio? detailsResult.others?.Radio:'no result'}</p>
