@@ -34,9 +34,10 @@ const showResult = resultValue=>{
     const details = document.getElementById("details")
     details.innerText="" 
 
-  if(!showValue || isStatus== false){
+  if(!showValue ||isStatus===false){
    document.getElementById("errorResult").style.display="block"
   }
+  
   else{
     document.getElementById("errorResult").style.display="none"
          //create element
@@ -51,7 +52,7 @@ const showResult = resultValue=>{
                   <p class="card-text "><span style="font-weight:bold">Brand:</span>${resultValues.brand}</p>
                 </div>
                 <div>
-                <button class="btn btn-primary" onclick="showDetails('${resultValues.slug}')">Details</button>
+                <a href="#"><button class="btn btn-primary" onclick="showDetails('${resultValues.slug}')">Details</button></a>
                 </div>
               </div>
                 </div>
@@ -61,11 +62,14 @@ const showResult = resultValue=>{
          });
   }
   spiner ("none")
+
 }
+
 //spinar show
 const spiner = (display)=>{
     document.getElementById("image").style.display=display
 }
+
 
 //show the image details
 const showDetails =detailsValue=>{
